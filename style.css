@@ -1,0 +1,143 @@
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --brackground-primary: #f4f5fb;
+  --background-secondary: #ffffff;
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+  --color-danger: #c93847;
+
+  --content-primary: #080b12;
+  --content-seconday: #374151;
+  --content-tertiary: #9ca3af;
+  --always-white: #ffffff;
+
+  --border-primary: #d1d4db;
+  --border-hover: #b9c2d0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--brackground-primary);
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.logo img {
+  width: 155px;
+  height: 40px;
+}
+
+#page {
+  max-width: 627px;
+  margin: 0 auto;
+  margin-top: 127px;
+}
+
+#page h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  margin: 16px 0px 55px 0px;
+}
+
+#page a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: medium;
+  margin: 0px 0px 55px 4px;
+}
+
+label {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: Semibold;
+}
+
+.add {
+  width: 100%;
+  gap: 8px;
+}
+
+.add input {
+  width: 451px;
+  height: 44px;
+  padding: 18px;
+  border-radius: 12px;
+  background-color: var(--background-secondary);
+  border: 1px solid #b9c2d0;
+}
+
+.add button {
+  width: 160px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--color-brand);
+  border: none;
+  color: var(--always-white);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 29px 0px 36px 4px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-secondary);
+  list-style: none;
+  padding: 12px 8px 12px 8px;
+  border-radius: 12px;
+}
+
+li button {
+  width: 32px;
+  height: 32px;
+  background-color: var(--always-white);
+  border: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+footer button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px 12px 8px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-danger);
+}
+
+footer span {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--always-white);
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
