@@ -18,6 +18,7 @@
   --border-hover: #b9c2d0;
 }
 
+/* PROPRIEDADES DE RESET */
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +30,7 @@ body {
   width: 100%;
 }
 
+/* LOGO PROJETO */
 .logo {
   display: flex;
   justify-content: center;
@@ -41,6 +43,7 @@ body {
   height: 40px;
 }
 
+/* CONTEÚDO PRINCIPAL */
 #page {
   max-width: 627px;
   margin: 0 auto;
@@ -67,6 +70,7 @@ label {
   font-weight: Semibold;
 }
 
+/* INPUT E BUTTON */
 .add {
   width: 100%;
   gap: 8px;
@@ -78,7 +82,11 @@ label {
   padding: 18px;
   border-radius: 12px;
   background-color: var(--background-secondary);
-  border: 1px solid #b9c2d0;
+  border: var(--border-primary);
+}
+
+input:hover {
+  border: var(--border-hover);
 }
 
 .add button {
@@ -88,13 +96,19 @@ label {
   background-color: var(--color-brand);
   border: none;
   color: var(--always-white);
+  transition: 1s all ease;
 }
 
+.add button:hover {
+  background-color: #a52c6b;
+  cursor: pointer;
+}
+/* LISTA DOS ITENS */
 ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   margin: 29px 0px 36px 4px;
+  gap: 12px;
 }
 
 li {
@@ -103,8 +117,8 @@ li {
   justify-content: space-between;
   background-color: var(--background-secondary);
   list-style: none;
-  padding: 12px 8px 12px 8px;
   border-radius: 12px;
+  padding: 8px 12px 8px 12px;
 }
 
 li button {
@@ -115,11 +129,14 @@ li button {
 }
 
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  cursor: pointer;
 }
 
+/* FOOTER COM MENSAGEM DE ALERTA */
 footer button {
   width: 100%;
   display: flex;
@@ -140,4 +157,38 @@ footer span {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/*-------------------MEDIA QUERIE--------------*/
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+  #page {
+    max-width: 327px;
+    height: 264px;
+    margin-top: 37px;
+  }
+
+  #page h1 {
+    margin: 16px 0px 44px 0px;
+  }
+
+  .add {
+    display: flex;
+    flex-direction: column;
+    width: 626px;
+    height: 104;
+    gap: 16px;
+  }
+
+  .add input {
+    width: 327px;
+    height: 44px;
+  }
+
+  .add button {
+    width: 327px;
+  }
 }
