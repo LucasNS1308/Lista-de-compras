@@ -103,6 +103,7 @@ input:hover {
   background-color: #a52c6b;
   cursor: pointer;
 }
+
 /* LISTA DOS ITENS */
 ul {
   display: flex;

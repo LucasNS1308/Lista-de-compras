@@ -20,14 +20,17 @@
 
     <section>
       <main id="page">
-        <a href="#"><img src="./icones/link button.svg" alt="icone de voltar" /></a>
+        <a href="#"><img src="./icones/link-button.svg" alt="icone de voltar" /></a>
 
         <h1 class="">Compras da semana</h1>
 
         <!----Input e botão para adicionar a lista-->
         <div class="add">
-          <input type="text" name="product" id="product" placeholder="Adicione um novo item" />
-          <button>Adicionar itens</button>
+          <form>
+            <label for="box"></label>
+            <input type="text" name="box" id="box" placeholder="Adicione um novo item" />
+            <button>Adicionar itens</button>
+          </form>
         </div>
 
         <!----Lista de itens adicionados-->
@@ -40,7 +43,7 @@
                 <span>Pão de forma</span>
               </div>
               <button>
-                <img src="./icones/icon delete.svg" alt="Icone para deletar produto" />
+                <img src="./icones/icon-delete.svg" alt="Icone para deletar produto" />
               </button>
             </li>
 
@@ -51,7 +54,7 @@
                 <span>Café preto</span>
               </div>
               <button>
-                <img src="./icones/icon delete.svg" alt="Icone para deletar produto" />
+                <img src="./icones/icon-delete.svg" alt="Icone para deletar produto" />
               </button>
             </li>
 
@@ -62,7 +65,7 @@
                 <span>Suco de laranja</span>
               </div>
               <button>
-                <img src="./icones/icon delete.svg" alt="Icone para deletar produto" />
+                <img src="./icones/icon-delete.svg" alt="Icone para deletar produto" />
               </button>
             </li>
 
@@ -73,7 +76,7 @@
                 <span>Bolacha</span>
               </div>
               <button>
-                <img src="./icones/icon delete.svg" alt="Icone para deletar produto" />
+                <img src="./icones/icon-delete.svg" alt="Icone para deletar produto" />
               </button>
             </li>
           </ul>
@@ -82,10 +85,10 @@
         <footer>
           <button>
             <div class="container-footer">
-              <img src="./icones/icon-exclamation.svg" alt="" />
+              <img src="./icones/icon-exclamation.svg" alt="Ponto de exclamação do item excluído" />
               <span>O item foi excluído da lista</span>
             </div>
-            <img src="./icones/delete-small.svg" alt="" />
+            <img src="./icones/delete-small.svg" alt="X do item excluído" />
           </button>
         </footer>
       </main>
