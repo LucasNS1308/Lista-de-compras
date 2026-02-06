@@ -2,7 +2,9 @@ const inputItem = document.getElementById('box'); //Criei uma variável que puxa
 const btnAdd = document.querySelector('button'); //Variável que puxa o elemento button
 const list = document.querySelector('ul'); //Varável que puxa o elemento da Lista
 const hasTextRegex = /\d+/g; //Variável para adicionar somente letras ou palavras
-const listRemove = document.querySelector('li');
+const listRemove = document.querySelectorAll('li');
+const footer = document.getElementById('alert');
+const itemRemove = document.getElementById('msg-remove');
 
 inputItem.addEventListener('input', () => {
   //Adiciona um evento de clique no input para receber apenas palavras ou letras.
@@ -36,9 +38,15 @@ btnAdd.addEventListener('click', (event) => {
 `;
   list.prepend(newItem); //Adiciona sempre ao primeiro elemento da lista
 
-  var btnRemove = newItem.querySelector('.btn-remove'); //Remove o item novo da lista e deixa o estático
+  const btnRemove = newItem.querySelector('.btn-remove'); //Remove o item novo da lista e deixa o estático
   btnRemove.addEventListener('click', () => {
     newItem.remove();
+
+    itemRemove.style.display = 'flex';
+
+    setTimeout(() => {
+      itemRemove.style.display = 'none';
+    }, 3000);
   });
 
   inputItem.value = ''; //Limpa sempre o valor do input após ele adicionar
@@ -47,7 +55,17 @@ btnAdd.addEventListener('click', (event) => {
 });
 
 //remover lista estatica
-const removeLista = document.querySelectorAll('.btn-remove');
-removeLista.addEventListener('click', () => {
-  listRemove.remove();
+listRemove.forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const li = botao.closest('li');
+    li.remove(); // 1. Remove o item
+
+    // 2. Aparece o alerta
+    itemRemove.style.display = 'flex';
+
+    // 3. Agendar o sumiço para daqui a 3 segundos
+    setTimeout(() => {
+      itemRemove.style.display = 'none';
+    }, 3000);
+  });
 });
